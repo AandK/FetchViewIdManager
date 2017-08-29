@@ -9,6 +9,18 @@ import java.lang.reflect.Field;
 
 /**
  * Created by wangxin on 17-8-28.
+ * Usage in Activity:
+ *     @Override
+ *   protected void onCreate(Bundle savedInstanceState) {
+ *       super.onCreate(savedInstanceState);
+ *
+ *       getWindow().getDecorView().post(new Runnable() {
+ *           @Override
+ *           public void run() {
+ *               FetchViewIdManager.getInstance().hookAllViews(HomeActivity3.this);
+ *           }
+ *       });
+ *   }
  */
 
 public class FetchViewIdManager {
